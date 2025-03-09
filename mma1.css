@@ -1,0 +1,71 @@
+body{
+    background-image: url(mgsky.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gold;
+}
+.intro{
+    text-align: center;
+    color: black;
+   
+}
+@keyframes run{
+    
+    from{transform: translateX(-100px)}
+    to{transform: translateX(600px)}
+}
+.contain{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    
+}
+.item11{
+    width: 240px;
+    height: 286px;
+}
+
+.item12{
+    
+    width: 268px;
+    height: 286px;
+    
+}
+.item13{
+    width: 268px;
+    height: 286px;
+}
+.item1{
+    margin: 30px;
+    width: 240px;
+    height: 370px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -1px 0 10px #000000;
+    padding: 0;
+}
+.item2{
+    margin: 30px;
+    width: 270px;
+    height: 370px;
+    text-align: center;
+    box-shadow: -1px 0 10px #000000;
+    border: 5px;
+}
+.item3{
+    margin: 30px;
+    width: 270px;
+    height: 374px;
+    text-align: center;
+    box-shadow: -1px 0 10px #000000;
+    border: 5px;
+    
+}
+
