@@ -1,23 +1,81 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="mma1.css"><body>
-    <h1>MADMEN'S ARCHIVE</h1>
-    <section>
-    <h3 class="intro">Welcome to Madmen's Archive</h3>
-    <h3 class="intro">Your one stop for awesome books</h3>
+<head>
+    <title>MADMEN'S ARCHIVE</title>
+    <link rel="stylesheet" href="mma1.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1 class="site-title">Madmen's Archive</h1>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#books" class="scroll-link">Books</a></li>
+                    <li><a href="#about" class="scroll-link">About</a></li>
+                    <li><a href="#genre" class="scroll-link">Genres</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">More</a>
+                        <div class="dropdown-content">
+                            <a href="#">Contact</a>
+                            <a href="#">FAQ</a>
+                            <a href="#">Settings</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="books" class="books-section">
+        <h2 class="section-title">Book Section</h2>
+        <div class="contain">
+            <div class="item1">
+                <a href="tgg.pdf"><img src="gatsby.jpg" class="book-cover"></a>
+                <h3>A perspective, a love story, and a mystery</h3>
+            </div>
+            <div class="item2">
+                <a href="EM.pdf"><img src="EMout.jpg" class="book-cover"></a>
+                <h3>8 men, a game defeat, and a scandal full of opportunities</h3>
+            </div>
+            <div class="item3">
+                <a href="MOS.pdf"><img src="MOS1.jpg" class="book-cover"></a>
+                <h3>What's a man if he isn't bounded by a purpose he's supposed to find out</h3>
+            </div>
+        </div>
     </section>
-    <head><title>MADMEN'S ARCHIVE</title></head>
-    <head><div class="contain">
-        <div class="item1"><a href="tgg.pdf"><img src="gatsby.jpg" href="tgg.pdf" class="item11"></a>
-        <h3>A prespective,a love story and a mystery</h3></div>
-        <div class="item2"><a href="EM.pdf"><img src="EMout.jpg" class="item12"></a>
-        <h3 class="p1">8 men,a game defeat and a scandal full of oppurtunities</h3></div>
-        <div class="item3"><a href="MOS.pdf"><img src="MOS1.jpg" class="item13"></a>
-        <h3>What's a man if he isn't bounded by a purpose he's supposed to find out</h3></div>
-        <div class="item4"></div>
-        <div class="item5"></div>
-        <div class="item6"></div>
-      
-    </div></head>
+
+    <div class="side-sections">
+        <section id="about">
+            <h2 class="section-title">About Us</h2>
+            <p class="intro">Welcome to Madmen's Archive, your one-stop destination for awesome books.</p>
+            <p class="intro">We curate a collection of intriguing stories and perspectives.</p>
+        </section>
+
+        <section id="genre">
+            <h2 class="section-title">Genres</h2>
+            <div class="genre-list">
+                <p>Mystery</p>
+                <p>Romance</p>
+                <p>Philosophy</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Madmen's Archive</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.scroll-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+
 </body>
 </html>
