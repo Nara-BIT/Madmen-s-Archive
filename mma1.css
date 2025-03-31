@@ -1,71 +1,198 @@
-body{
+body {
     background-image: url(mgsky.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    color: #f0f0f0;
 }
-h1{
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+    top: 0;
+    z-index: 100;
+    border-radius: 10px;
+    margin: 10px auto;
+    max-width: 1200px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-title {
+    font-size: 2.5em;
+    color: gold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-menu li {
+    margin: 0 10px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
     color: gold;
 }
-.intro{
-    text-align: center;
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
     color: black;
-   
-}
-@keyframes run{
-    
-    from{transform: translateX(-100px)}
-    to{transform: translateX(600px)}
-}
-.contain{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-    
-}
-.item11{
-    width: 240px;
-    height: 286px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 
-.item12{
-    
-    width: 268px;
-    height: 286px;
-    
+.dropdown-content a:hover {
+    background-color: #ddd;
 }
-.item13{
-    width: 268px;
-    height: 286px;
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
-.item1{
-    margin: 30px;
-    width: 240px;
-    height: 370px;
-    text-align: center;
-    align-items: center;
+
+.nav-menu a.scroll-link {
+    background-color: #4285f4;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+}
+
+.nav-menu a.scroll-link:hover {
+    background-color: #1a73e8;
+}
+
+.books-section {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.contain {
+    display: flex;
     justify-content: center;
-    box-shadow: -1px 0 10px #000000;
-    padding: 0;
-}
-.item2{
-    margin: 30px;
-    width: 270px;
-    height: 370px;
-    text-align: center;
-    box-shadow: -1px 0 10px #000000;
-    border: 5px;
-}
-.item3{
-    margin: 30px;
-    width: 270px;
-    height: 374px;
-    text-align: center;
-    box-shadow: -1px 0 10px #000000;
-    border: 5px;
-    
+    flex-wrap: wrap;
+    margin: 20px 0;
 }
 
+.item1, .item2, .item3 {
+    margin: 15px;
+    width: 180px;
+    text-align: center;
+    box-shadow: -1px 0 10px #000000;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    animation: scaleUp 1s ease-in-out;
+}
+
+.book-cover {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.book-cover:hover {
+    transform: scale(1.05);
+}
+
+.item1 h3, .item2 h3, .item3 h3 {
+    font-size: 0.9em;
+    padding: 5px;
+    color: black;
+}
+
+.side-sections {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+}
+
+.side-sections section {
+    width: 45%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.genre-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.genre-list p {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    color: #333;
+    animation: slideIn 1s ease-in-out;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    margin-top: 50px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
